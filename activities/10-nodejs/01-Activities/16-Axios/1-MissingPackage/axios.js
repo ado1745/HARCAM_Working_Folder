@@ -1,17 +1,17 @@
 // TODO Grab the axios package...
 // @link https://www.npmjs.com/package/axios
-var axios = require("axios");
+const axios = require("axios");
 
 // Run the axios.get function...
 // The axios.get function takes in a URL and returns a promise (just like $.ajax)
 axios.get("https://en.wikipedia.org/wiki/Kudos_(granola_bar)").then(
-  function(response) {
+  function (response) {
     // If the axios was successful...
     // Then log the body from the site!
     console.log(response.data);
   },
 
-  function(error) {
+  function (error) {
     if (error.response) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx

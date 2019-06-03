@@ -14,3 +14,44 @@
 // Remember to be creative!
 
 // ========================================================================
+
+const inquirer = require("inquirer");
+// console.log(inquirer);
+
+let Userpassword = "Test"
+inquirer.prompt([
+    {
+        type: "input",
+        message: "Hey what's up how is your day?",
+        name: "input"
+    },
+
+    {
+        type: "password",
+        message: "Please set your password",
+        name: "password",
+        validate: function passValidite(name) {
+            if (name === Userpassword) {
+                console.log(name);
+            };
+        }
+    },
+
+    {
+        type: "list",
+        message: "How is your favorite Super Hero",
+        choices: ["Super Man", "Iron Man", "Batman", "Hulk"],
+        name: "superHero"
+    },
+
+    {
+        message: "Select your sex",
+        type: "checkbox",
+        name: "sex",
+        choices: ["Male", "Female", "Prefer not to disclose"]
+
+    }
+
+]).then(function (answers) {
+    console.log(answers)
+});

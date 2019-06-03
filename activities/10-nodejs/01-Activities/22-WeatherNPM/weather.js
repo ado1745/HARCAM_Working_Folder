@@ -1,8 +1,8 @@
 // Here we include the weather-js so we can use it in our Node application.
-var weather = require("weather-js");
+const weather = require("weather-js");
 
 // Then we use the package to search for the weather at a location
-weather.find({ search: "Anchorage, AK", degreeType: "F" }, function(err, result) {
+weather.find({ search: "Boston, MA", degreeType: "C" }, function (err, result) {
 
   // If there is an error log it.
   if (err) {
